@@ -18,10 +18,8 @@ dbConnection()
         app.use(express.json());
         app.use(express.urlencoded({ extended: false }));
         app.use(cookieParser());
-        app.use(cors({
-            origin: ['http://localhost:5173', 'http://localhost:5174']
-        }));
-
+        app.use(cors());
+        
         // Routes
         app.use('/api', apiRouter);
 
